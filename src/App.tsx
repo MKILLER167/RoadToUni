@@ -5,7 +5,7 @@ import { BackgroundElements } from "./components/BackgroundElements";
 import { HomePage } from "./components/HomePage";
 import { AboutPage } from "./components/AboutPage";
 import { SearchResults } from "./components/SearchResults";
-import { BottomNavigation } from "./components/BottomNavigation";
+import { SearchResults } from "./components/SearchResults";
 import { FloatingActionButton } from "./components/FloatingActionButton";
 import { allUniversities } from "./data/universities";
 import { toast } from "sonner";
@@ -347,16 +347,21 @@ export default function App() {
         {isPageLoaded && renderContent()}
       </AnimatePresence>
 
-      {/* Enhanced Bottom Navigation */}
+      import {TabBar} from "./components/TabBar";
+
+      // ... (in return JSX)
+
+      {/* Enhanced Tab Bar (Top Navigation) */}
       <AnimatePresence>
         {!showUniversityDetails && isPageLoaded && (
           <motion.div
-            initial={{ y: 100, opacity: 0 }}
+            initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            exit={{ y: 100, opacity: 0 }}
+            exit={{ y: -100, opacity: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
+            className="relative z-50"
           >
-            <BottomNavigation
+            <TabBar
               currentLanguage={currentLanguage}
               activeNav={activeNav}
               onNavClick={handleNavClick}
@@ -389,6 +394,7 @@ export default function App() {
 
       {/* Enhanced Toast Notifications */}
       <Toaster
+        theme={isDarkMode ? 'dark' : 'light'}
         position="top-center"
         toastOptions={{
           style: {

@@ -298,12 +298,12 @@ export function HomePage({
         <ImageWithFallback
           src="https://images.unsplash.com/photo-1562774053-701939374585?w=1600&h=600&fit=crop"
           alt="Egyptian university campus"
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/95 to-background/90"></div>
       </div>
 
-      <div className="container mx-auto px-4 py-3 max-w-4xl relative z-10 min-h-screen flex flex-col">
+      <div className="container mx-auto px-4 py-3 pt-20 max-w-4xl relative z-10 min-h-screen flex flex-col">
         {/* Header */}
         <motion.div
           className="flex justify-between items-center py-3 mb-6"
@@ -374,7 +374,7 @@ export function HomePage({
                     exit={{ rotate: -90, opacity: 0 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <Moon className="h-4 w-4 text-primary" />
+                    <Moon className="h-6 w-6 text-primary" />
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -418,8 +418,8 @@ export function HomePage({
                   <div className="grid grid-cols-2 gap-2">
                     <button
                       className={`p-2 rounded-lg border transition-all duration-300 text-left ${educationalBackground === "thanawiya"
-                          ? "border-primary bg-primary/5 text-primary"
-                          : "border-border hover:border-primary/30 text-muted-foreground hover:text-foreground"
+                        ? "border-primary bg-primary/5 text-primary"
+                        : "border-border hover:border-primary/30 text-muted-foreground hover:text-foreground"
                         }`}
                       onClick={() => onEducationalBackgroundSelect("thanawiya")}
                     >
@@ -443,8 +443,8 @@ export function HomePage({
 
                     <button
                       className={`p-2 rounded-lg border transition-all duration-300 text-left ${educationalBackground === "international"
-                          ? "border-primary bg-primary/5 text-primary"
-                          : "border-border hover:border-primary/30 text-muted-foreground hover:text-foreground"
+                        ? "border-primary bg-primary/5 text-primary"
+                        : "border-border hover:border-primary/30 text-muted-foreground hover:text-foreground"
                         }`}
                       onClick={() => onEducationalBackgroundSelect("international")}
                     >

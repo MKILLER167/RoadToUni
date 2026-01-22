@@ -37,11 +37,7 @@ export function useLanguage() {
             document.documentElement.setAttribute('lang', 'en');
         }
 
-        // Show feedback toast
-        toast.success(
-            lang === 'ar' ? '🌍 تم تغيير اللغة إلى العربية' : '🌍 Language changed to English',
-            { duration: 2000 }
-        );
+
     }, []);
 
     return { currentLanguage, handleLanguageChange };

@@ -24,13 +24,7 @@ export function useTheme(currentLanguage: string) {
             storage.set('theme', 'light');
         }
 
-        // Show feedback toast
-        toast.success(
-            enabled
-                ? (currentLanguage === 'ar' ? '🌙 تم تفعيل الوضع المظلم' : '🌙 Dark mode enabled')
-                : (currentLanguage === 'ar' ? '☀️ تم تفعيل الوضع الفاتح' : '☀️ Light mode enabled'),
-            { duration: 2000 }
-        );
+
     }, [currentLanguage]);
 
     return { isDarkMode, handleDarkModeToggle };
