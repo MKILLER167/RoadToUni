@@ -5,7 +5,7 @@ import { BackgroundElements } from "./components/BackgroundElements";
 import { HomePage } from "./components/HomePage";
 import { AboutPage } from "./components/AboutPage";
 import { SearchResults } from "./components/SearchResults";
-import { SearchResults } from "./components/SearchResults";
+import { TabBar } from "./components/TabBar";
 import { FloatingActionButton } from "./components/FloatingActionButton";
 import { allUniversities } from "./data/universities";
 import { toast } from "sonner";
@@ -347,26 +347,14 @@ export default function App() {
         {isPageLoaded && renderContent()}
       </AnimatePresence>
 
-      import {TabBar} from "./components/TabBar";
-
-      // ... (in return JSX)
-
       {/* Enhanced Tab Bar (Top Navigation) */}
       <AnimatePresence>
         {!showUniversityDetails && isPageLoaded && (
-          <motion.div
-            initial={{ y: -100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -100, opacity: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="relative z-50"
-          >
-            <TabBar
-              currentLanguage={currentLanguage}
-              activeNav={activeNav}
-              onNavClick={handleNavClick}
-            />
-          </motion.div>
+          <TabBar
+            currentLanguage={currentLanguage}
+            activeNav={activeNav}
+            onNavClick={handleNavClick}
+          />
         )}
       </AnimatePresence>
 

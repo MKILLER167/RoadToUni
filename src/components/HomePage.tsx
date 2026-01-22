@@ -303,10 +303,10 @@ export function HomePage({
         <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/95 to-background/90"></div>
       </div>
 
-      <div className="container mx-auto px-4 py-3 pt-20 max-w-4xl relative z-10 min-h-screen flex flex-col">
+      <div className="container mx-auto px-4 py-3 pt-32 max-w-4xl relative z-10 min-h-screen flex flex-col">
         {/* Header */}
         <motion.div
-          className="flex justify-between items-center py-3 mb-6"
+          className="flex justify-between items-center py-3 mb-6 mt-32"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}

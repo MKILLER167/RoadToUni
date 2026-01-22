@@ -9,17 +9,17 @@ import {
   Info,
 } from "lucide-react";
 
-interface BottomNavigationProps {
+interface TabBar {
   currentLanguage: string;
   activeNav: string;
   onNavClick: (navItem: string) => void;
 }
 
-export function BottomNavigation({
+export function TabBar({
   currentLanguage,
   activeNav,
   onNavClick,
-}: BottomNavigationProps) {
+}: TabBar) {
   const navItems = [
     {
       id: "home",
@@ -54,7 +54,7 @@ export function BottomNavigation({
   ];
 
   return (
-    <div className="fixed bottom-6 left-0 right-0 z-50 flex justify-center pointer-events-none">
+    <div className="fixed top-4 left-0 right-0 z-50 flex justify-center pointer-events-none">
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
