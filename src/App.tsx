@@ -10,6 +10,9 @@ import { FloatingActionButton } from "./components/FloatingActionButton";
 import { allUniversities } from "./data/universities";
 import { toast } from "sonner";
 import { motion, AnimatePresence } from "motion/react";
+import { pageTransitions } from "./utils/animations";
+import { useTheme } from "./hooks/useTheme";
+import { useLanguage } from "./hooks/useLanguage";
 import { useSearch } from "./hooks/useSearch";
 // LoadingSpinner was removed, using LoadingSkeleton instead
 import { LoadingSkeleton } from "./components/LoadingSkeleton";
